@@ -1,4 +1,3 @@
-import React from "react";
 import "./Card.css";
 interface Props {
   id: number;
@@ -7,17 +6,8 @@ interface Props {
   owner: string;
   type: string;
   onClick: (setId: number) => void;
-  trashOnClick?: (setId: number) => void;
 }
-function CardList({
-  id,
-  title,
-  count,
-  owner,
-  type,
-  onClick,
-  trashOnClick,
-}: Props) {
+function CardList({ id, title, count, owner, type, onClick }: Props) {
   return (
     <>
       <div

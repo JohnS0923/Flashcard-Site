@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Flashcard.css";
 import axios from "axios";
 
@@ -46,7 +46,7 @@ function Flashcard2({
         cardBack: backText,
         starred: isStarred,
       })
-      .then((res) => {
+      .then(() => {
         console.log("saved card successfully");
         if (onChange) {
           onChange();

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Flashcard.css";
 import axios from "axios";
 
@@ -54,6 +54,7 @@ function Flashcard({
         starred: isStarred,
       })
       .then((res) => {
+        setIsStarred(res.data.card.starred);
         setFrontText(res.data.card.cardFront);
         setBackText(res.data.card.cardBack);
         console.log(frontText);

@@ -1,6 +1,5 @@
-import React, { createFactory, useState, useEffect } from "react";
-import Flashcard from "../components/Flashcard";
-import { getGlobalVariable, setGlobalVariable } from "../variable/globalVar";
+import { useState, useEffect } from "react";
+import { getGlobalVariable } from "../variable/globalVar";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -36,7 +35,7 @@ function CreateFolder() {
       };
       axios
         .post("https://localhost:7119/Flashcard/AddFolder", dataToSend)
-        .then((res) => {
+        .then(() => {
           // console.log(res.data);
           navigate("../");
         })

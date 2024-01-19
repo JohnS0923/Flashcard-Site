@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Flashcard from "../components/Flashcard";
-import { getGlobalVariable, setGlobalVariable } from "../variable/globalVar";
+import { getGlobalVariable } from "../variable/globalVar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -153,7 +153,7 @@ function CreateSet() {
         </form>
       </div>
       {cardsList != null
-        ? cardsList.map((card, index, array) => (
+        ? cardsList.map((card) => (
             <Flashcard
               key={card.cardId}
               id={card.cardId}

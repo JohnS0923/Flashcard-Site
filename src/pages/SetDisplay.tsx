@@ -1,8 +1,8 @@
-import React, { useEffect, useState, ChangeEvent } from "react";
+import { useEffect, useState, ChangeEvent } from "react";
 import { useParams, NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Flashcard from "../components/Flashcard2";
-import { getGlobalVariable, setGlobalVariable } from "../variable/globalVar";
+import { getGlobalVariable } from "../variable/globalVar";
 import FlippableCard from "../components/FlippableCard";
 import Popup from "../popup/Popup.tsx";
 
@@ -53,6 +53,7 @@ function DisplaySet() {
   const [slideList, setSlideList] = useState<Cards[]>([]);
   const [buttonPopup, setButtonPopup] = useState(false);
   const [isStarredSwitchToggled, setStarredSwitchToggled] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const handleStarredSwitchToggle = () => {
     setStarredSwitchToggled(!isStarredSwitchToggled);
@@ -90,14 +91,6 @@ function DisplaySet() {
     setSlideList(updatedSlideList);
     // console.log(updatedSlideList);
   }, [isShuffleSwitchToggled, isStarredSwitchToggled]);
-
-  // useEffect(() => {
-  //   if (isStarredSwitchToggled) {
-  //     setSlideList(cardsList.filter((card) => card.starred));
-  //   } else {
-  //     setSlideList(cardsList);
-  //   }
-  // }, [isStarredSwitchToggled]);
 
   //get card data
   const getData = () => {
@@ -194,7 +187,13 @@ function DisplaySet() {
             {slideLocation != 0 ? (
               <i
                 className="fa-solid fa-arrow-left"
-                onClick={() => setSlideLocation(slideLocation - 1)}
+                onClick={() => {
+                  setSlideLocation(slideLocation - 1);
+
+                  setIsFlipped(true);
+                  setIsFlipped(false);
+                  console.log(isFlipped);
+                }}
               ></i>
             ) : (
               <i className="fa-solid fa-arrow-left disable"></i>
@@ -216,17 +215,26 @@ function DisplaySet() {
                 </div>
               </div>
             ) : (
-              <FlippableCard
-                FrontText={slideList[slideLocation].cardFront}
-                BackText={slideList[slideLocation].cardBack}
-              ></FlippableCard>
+              <div>
+                <FlippableCard
+                  frontText={slideList[slideLocation].cardFront}
+                  backText={slideList[slideLocation].cardBack}
+                  isFlipped={isFlipped}
+                  onFlip={() => setIsFlipped(!isFlipped)}
+                />
+              </div>
             )}
 
             {/* setup control */}
             {slideLocation != slideList.length ? (
               <i
                 className="fa-solid fa-arrow-right"
-                onClick={() => setSlideLocation(slideLocation + 1)}
+                onClick={() => {
+                  setSlideLocation(slideLocation + 1);
+                  setIsFlipped(true);
+
+                  setIsFlipped(false);
+                }}
               ></i>
             ) : (
               <i className="fa-solid fa-arrow-right disable"></i>

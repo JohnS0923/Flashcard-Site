@@ -1,12 +1,8 @@
-import React from "react";
 import "./Navbar.css";
 import logo from "../imgs/logo.png";
-import Button from "./Button";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  const signUp = () => {};
-  const login = () => {};
   return (
     <>
       <nav className="nav">

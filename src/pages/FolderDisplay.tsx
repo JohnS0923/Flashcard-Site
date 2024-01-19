@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate, NavLink } from "react-router-dom";
 import Card from "../components/Card";
 import EditFolder from "../popup/Popup.tsx";
-import { getGlobalVariable, setGlobalVariable } from "../variable/globalVar";
+import { getGlobalVariable } from "../variable/globalVar";
 
 import "../style/main.css";
 function FolderDisplay() {
@@ -51,7 +51,7 @@ function FolderDisplay() {
           "&folderID=" +
           folderId
       )
-      .then((res) => {
+      .then(() => {
         getSets();
       })
       .catch((error) => {
@@ -68,7 +68,7 @@ function FolderDisplay() {
           "&folderID=" +
           folderId
       )
-      .then((res) => {
+      .then(() => {
         // console.log(res.data);
         getSets();
       })
@@ -102,7 +102,7 @@ function FolderDisplay() {
       .post(
         "https://localhost:7119/Flashcard/DeleteFolder?folderId=" + folderId
       )
-      .then((res) => {
+      .then(() => {
         // console.log(res.data);
         navigate("../");
       })

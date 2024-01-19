@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { getGlobalVariable, setGlobalVariable } from "../variable/globalVar";
+import { useEffect, useState } from "react";
+import { getGlobalVariable } from "../variable/globalVar";
 import Card from "../components/Card";
 import axios from "axios";
 import "../style/main.css";
@@ -111,12 +111,9 @@ function Home() {
                   ))
                 : "No Folders Available"}
             </div>
-            {getGlobalVariable()}
           </div>
         </>
-      ) : (
-        <p>{getGlobalVariable()}</p>
-      )}
+      ) : null}
     </>
   );
 }

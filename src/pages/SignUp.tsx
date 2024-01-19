@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../style/main.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { getGlobalVariable, setGlobalVariable } from "../variable/globalVar";
+import { setGlobalVariable } from "../variable/globalVar";
 
 function SignUp() {
   const navigate = useNavigate();
