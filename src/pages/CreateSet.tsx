@@ -68,7 +68,7 @@ function CreateSet() {
         .post("https://localhost:7119/Flashcard/CreateSetWithCard", dataToSend)
         .then((res) => {
           console.log(res.data);
-          navigate("../");
+          navigate("../index.html");
         })
         .catch((error) => {
           console.error("Error:", error);
