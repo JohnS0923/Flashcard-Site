@@ -121,15 +121,6 @@ function SignUp() {
           </button>
         </form>
       </div>
-      {/* Display state variable values */}
-      <div className="display-values">
-        <p>First Name: {fName}</p>
-        <p>Last Name: {lName}</p>
-        <p>Email: {email}</p>
-        <p>Username: {username}</p>
-        <p>Password: {password}</p>
-        <p>error: {errorMsg}</p>
-      </div>
       <NavLink to="../login" className="login-text">
         <p>Have An Account? Click Here To Login</p>
       </NavLink>

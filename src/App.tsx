@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import CreateSet from "./pages/CreateSet";
@@ -21,6 +22,7 @@ function App() {
               <>
                 <Navbar></Navbar>
                 <Home></Home>
+                <Footer></Footer>
               </>
             }
           ></Route>
@@ -30,6 +32,7 @@ function App() {
               <>
                 <Navbar></Navbar>
                 <CreateSet></CreateSet>
+                <Footer></Footer>
               </>
             }
           ></Route>
@@ -39,6 +42,7 @@ function App() {
               <>
                 <Navbar></Navbar>
                 <CreateFolder></CreateFolder>
+                <Footer></Footer>
               </>
             }
           ></Route>
@@ -48,6 +52,7 @@ function App() {
               <>
                 <Navbar></Navbar>
                 <SetDisplay></SetDisplay>
+                <Footer></Footer>
               </>
             }
           ></Route>
@@ -57,6 +62,7 @@ function App() {
               <>
                 <Navbar></Navbar>
                 <SetDisplay></SetDisplay>
+                <Footer></Footer>
               </>
             }
           ></Route>
@@ -66,6 +72,7 @@ function App() {
               <>
                 <Navbar></Navbar>
                 <FolderDisplay></FolderDisplay>
+                <Footer></Footer>
               </>
             }
           ></Route>
@@ -75,6 +82,7 @@ function App() {
               <>
                 <Navbar></Navbar>
                 <FolderDisplay></FolderDisplay>
+                <Footer></Footer>
               </>
             }
           ></Route>

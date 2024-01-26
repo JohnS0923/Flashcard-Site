@@ -1,7 +1,7 @@
 .flashcard{
     display: grid;
     grid-template-columns: .5fr 1fr .1fr;
-    border: 1px solid black;
+    border: 1px solid var(--primaryColor);
     margin: 20px;
     padding: 20px;
 }

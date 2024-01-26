@@ -30,14 +30,16 @@ backface-visibility: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
+border: 3px solid var(--primaryColor);
+
 }
 
 .the-card-front {
-background-color: #e0e0e0;
+background-color: #ffffff;
+padding: 1.5%;
 }
 
 .the-card-back {
-background-color: #90caf9;
 transform: rotateY(180deg);
 }
   

@@ -106,7 +106,7 @@ function DisplaySet() {
         //     ? cardsList.filter((card: Cards) => card.starred)
         //     : cardsList
         // );
-        console.log(cardsList);
+        // console.log(cardsList);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -189,10 +189,7 @@ function DisplaySet() {
                 className="fa-solid fa-arrow-left"
                 onClick={() => {
                   setSlideLocation(slideLocation - 1);
-
-                  setIsFlipped(true);
                   setIsFlipped(false);
-                  console.log(isFlipped);
                 }}
               ></i>
             ) : (
@@ -205,9 +202,10 @@ function DisplaySet() {
                   width: "400px",
                   height: "300px",
                   cursor: "pointer",
-                  backgroundColor: "#e0e0e0",
+                  backgroundColor: "#E1E1E1",
                   display: "flex",
-                  alignItems: "center", // Vertical centering
+                  alignItems: "center",
+                  border: "3px solid var(--primaryColor)",
                 }}
               >
                 <div className="buttons" onClick={() => setSlideLocation(0)}>
@@ -231,8 +229,6 @@ function DisplaySet() {
                 className="fa-solid fa-arrow-right"
                 onClick={() => {
                   setSlideLocation(slideLocation + 1);
-                  setIsFlipped(true);
-
                   setIsFlipped(false);
                 }}
               ></i>
@@ -240,7 +236,7 @@ function DisplaySet() {
               <i className="fa-solid fa-arrow-right disable"></i>
             )}
           </div>
-          <div>
+          <div className="slideBottom">
             {slideLocation == slideList.length ? null : (
               <p>
                 {slideLocation + 1}/{slideList.length}

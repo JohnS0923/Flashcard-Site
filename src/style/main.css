@@ -1,11 +1,28 @@
+:root {
+    --buttonColor: #86dce7;
+    --primaryColor: #57BC90;
+    --primaryDark: #015249;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
 
+main{
+    color: rgb(5, 5, 5);
+}
 .login-container,.signup-container{
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     margin: auto;
     width: 80%;
     height: 50vh;
-    border: 3px solid rgb(0, 0, 0);
+    border: 3px solid #57BC90;
     padding: 10px;
     margin-top: 15%;
 }
@@ -24,11 +41,11 @@
 
 /* home */
 .set-cards, .folder-cards{
-    margin: 20px;
+    margin: 8%;
 }
 .set-cards h2,.folder-cards h2{
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--primaryDark);
 }
 .cardList{
     display: flex;
@@ -85,7 +102,7 @@ margin: 0; /* Remove default margin to ensure accurate centering */
   
 .buttons{
     text-align: center;
-    background-color: rgb(172, 180, 180);
+    background-color: var(--buttonColor);
     border-radius: 25px;
     padding: 1px;
     padding-top: 7px;
@@ -144,9 +161,11 @@ i:hover{
   .disable{
     color: gray;
   }
-
+  .slideBottom{
+    display: flex;
+  }
 .fa-gear{
     position: relative;
     left: 180px;
-    bottom: 40px;
+    top: 3px;
 }

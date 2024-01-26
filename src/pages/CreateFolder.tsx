@@ -46,39 +46,41 @@ function CreateFolder() {
   };
   return (
     <>
-      <h1 className="center">Create Folder</h1>
-      <div className="finish-btn">
-        <button className="btn btn-primary" onClick={CreateFolder}>
-          Finish
-        </button>
-      </div>
-      <div className="folder-form">
-        <form>
-          <div className="mb-3">
-            <label htmlFor="folderTitle" className="form-label">
-              Set Title
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="folderTitle"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="folderDesc" className="form-label">
-              Set Description
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="folderDesc"
-              value={desc}
-              onChange={(e) => setDesc(e.target.value)}
-            />
-          </div>
-        </form>
+      <div style={{ height: "100%" }}>
+        <h1 className="center">Create Folder</h1>
+        <div className="finish-btn">
+          <button className="btn btn-primary" onClick={CreateFolder}>
+            Finish
+          </button>
+        </div>
+        <div className="folder-form">
+          <form>
+            <div className="mb-3">
+              <label htmlFor="folderTitle" className="form-label">
+                Set Title
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="folderTitle"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="folderDesc" className="form-label">
+                Set Description
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="folderDesc"
+                value={desc}
+                onChange={(e) => setDesc(e.target.value)}
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );

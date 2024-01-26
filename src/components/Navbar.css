@@ -7,8 +7,8 @@ nav{
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
-    background-color: rgb(216, 216, 219);
-    
+    border-bottom: 1px solid var(--primaryDark);
+    color: black;
 }
 nav p {
     margin: 0; /* Remove default margin */
@@ -30,7 +30,7 @@ nav p {
 }
 .nav-btn{
     text-align: center;
-    background-color: rgb(172, 180, 180);
+    background-color: var(--buttonColor);
     border-radius: 25px;
     flex-grow: .1;
     padding: 10px;

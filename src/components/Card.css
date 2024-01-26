@@ -1,5 +1,6 @@
 .card{
     min-height: 140px;
+    border: 1px solid var(--primaryColor)!important;
 }
 .card-container{
     margin: 0px;
