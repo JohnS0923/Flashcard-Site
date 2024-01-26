@@ -57,6 +57,7 @@ function SignUp() {
     <>
       <div className="signup-container">
         <h1 className="title">Sign Up</h1>
+        <p>{errorMsg}</p>
         <form>
           <div className="mb-3">
             <label className="form-label">First Name</label>
